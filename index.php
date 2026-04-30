@@ -1,3 +1,17 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!-- HTML mein kahin bhi ye link laga dein -->
+<div style="text-align: right; padding: 20px;">
+    <span style="color: #fff;">Welcome, <?php echo $_SESSION['username']; ?>!</span>
+    <a href="logout.php" style="background: blue; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Logout</a>
+</div>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
