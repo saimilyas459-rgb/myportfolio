@@ -170,48 +170,53 @@ header nav a:hover {
 }
 
 
-.social-links-container {
+.about-social-btns {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 20px 0;
     flex-wrap: wrap;
+    width: 100%;
 }
 
-.social-icon {
+.about-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background: #222;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
+    gap: 12px;
+    background: #1a1a1a;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none !important;
     border: 1px solid #333;
-    transition: 0.3s;
+    transition: 0.4s ease;
     font-size: 15px;
+    white-space: nowrap;
 }
 
-.social-icon i {
-    color: #00f;
-    font-size: 20px;
+.about-btn i {
+    font-size: 18px;
+    color: #fff;
 }
 
-.social-icon:hover {
-    border-color: #00f;
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
+.about-btn:hover {
     transform: translateY(-5px);
+    border-color: #0044ff;
+    box-shadow: 0 5px 15px rgba(0, 68, 255, 0.3);
 }
 
-.live-site {
-    background: linear-gradient(45deg, #000, #00f);
+.about-btn.github:hover { background: #333; }
+.about-btn.fiverr:hover { background: #1dbf73; border-color: #1dbf73; }
+.about-btn.linkedin:hover { background: #0077b5; border-color: #0077b5; }
+
+.about-btn.netzing {
+    background: linear-gradient(45deg, #000000, #0044ff);
     border: none;
 }
 
-.live-site i {
-    color: #fff;
+.about-btn.netzing:hover {
+    box-shadow: 0 5px 20px rgba(0, 68, 255, 0.5);
 }
-
 .projects-section {
     background-color: #111;
     padding: 80px 50px;
@@ -455,5 +460,1457 @@ header nav a:hover {
     .review-contact-section { padding: 50px 20px; }
     .equal-box { max-width: 100%; }
 }
+
+.main-footer {
+    background: #0d0d0d;
+    color: #ffffff;
+    padding: 80px 0 20px;
+    border-top: 1px solid #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    color: #0044ff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-desc {
+    color: #a0a0a0;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.footer-heading {
+    font-size: 19px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 35px;
+    height: 2px;
+    background: #0044ff;
+}
+
+.text-center .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.footer-links li a:hover {
+    color: #0044ff;
+    padding-left: 8px;
+}
+
+.footer-contact p {
+    color: #a0a0a0;
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contact i {
+    color: #0044ff;
+}
+
+.social-wrapper {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s ease;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    background: #0044ff;
+    border-color: #0044ff;
+    transform: translateY(-5px);
+}
+
+.fiverr-btn {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.fiverr-btn:hover {
+    background: #0044ff !important;
+    color: #ffffff !important;
+    border-color: #0044ff !important;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #1a1a1a;
+    color: #555;
+    font-size: 13px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+.footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+.social-wrapper {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+                       /////////////about.php/////////////////////..................///////////////
+
+
+
+/* --- 1. Basic Setup --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+    background-color: #000; 
+    color: #fff; 
+    overflow-x: hidden; 
+}
+
+/* --- 2. Header & Navigation --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo { 
+    font-size: 26px; 
+    font-weight: 800; 
+    color: #0044ff; 
+}
+
+.nav-item { 
+    color: #fff; 
+    text-decoration: none; 
+    margin-left: 25px; 
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    transition: 0.4s; 
+}
+
+.nav-item:hover, .active-link { 
+    background-color: #0044ff; 
+}
+
+/* --- 3. Hero Section --- */
+.about-hero-custom {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(#111 2px, transparent 2px);
+    background-size: 30px 30px;
+    z-index: 1;
+}
+
+.about-hero-content { 
+    position: relative; 
+    z-index: 2; 
+    width: 90%; 
+    max-width: 1200px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.about-hero-left h1 { font-size: 60px; margin-bottom: 15px; }
+.hero-desc { color: #aaa; line-height: 1.8; margin-bottom: 30px; max-width: 500px; }
+.hero-action-btns { display: flex; gap: 15px; }
+
+.hero-btn {
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    background: #111;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.hero-btn:hover { 
+    border-color: #0044ff; 
+    transform: translateY(-3px);
+}
+
+/* --- 4. Interactive Box (Full Dots & Blue Hover) --- */
+.interactive-dot-box { 
+    width: 380px; 
+    height: 380px; 
+    background: rgba(15, 15, 15, 0.8); 
+    border: 1px solid #222; 
+    border-radius: 30px; 
+    display: grid; 
+    /* Grid ko 14x14 kiya taake dots zyada aur dense hon */
+    grid-template-columns: repeat(14, 1fr); 
+    grid-template-rows: repeat(14, 1fr);
+    gap: 0; 
+    padding: 20px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.repel-dot { 
+    width: 4px; 
+    height: 4px; 
+    background: rgba(255, 255, 255, 0.08); /* Light color initially */
+    border-radius: 50%; 
+    margin: auto;
+    transition: all 0.3s ease; 
+}
+
+.repel-dot:hover { 
+    background: #0044ff !important; 
+    box-shadow: 0 0 10px #0044ff;
+    transform: scale(1.8);
+}
+
+.box-label { 
+    position: absolute; 
+    bottom: 15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #333; 
+    font-size: 9px; 
+    text-transform: uppercase; 
+    pointer-events: none;
+}
+
+/* --- 5. About Profile Card (Centered Text) --- */
+.about-section {
+    background-color: #111;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,255,0.4);
+    background-color: #222;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the whole box on the page */
+}
+
+/* Left Side (Image) */
+.about-left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.about-left img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Right Side (Text) */
+.about-right {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px 40px; /* Space adjusted */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-right h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #00f;
+    width: 100%;
+}
+
+.about-right p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+    margin: 0;
+    max-width: 600px;
+}
+
+
+.about-social-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1a1a1a;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    border: 1px solid #333;
+    transition: 0.4s ease;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.about-btn i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.about-btn:hover {
+    transform: translateY(-5px);
+    border-color: #0044ff;
+    box-shadow: 0 5px 15px rgba(0, 68, 255, 0.3);
+}
+
+.about-btn.github:hover { background: #333; }
+.about-btn.fiverr:hover { background: #1dbf73; border-color: #1dbf73; }
+.about-btn.linkedin:hover { background: #0077b5; border-color: #0077b5; }
+
+.about-btn.netzing {
+    background: linear-gradient(45deg, #000000, #0044ff);
+    border: none;
+}
+
+.about-btn.netzing:hover {
+    box-shadow: 0 5px 20px rgba(0, 68, 255, 0.5);
+}
+
+///footer/////////
+
+/* --- Modern Professional Footer --- */
+.main-footer {
+    background: #050505;
+    color: #ffffff;
+    padding: 80px 0 30px;
+    border-top: 1px solid #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1240px; /* Thora wide kiya taake corner tak jaye */
+    margin: 0 auto;
+    display: grid;
+    /* Is line ko dhyan se dekhein: center column (Quick Links) ko narrow rakha hai 
+       taake About aur Contact corners ki taraf shift ho jayen */
+    grid-template-columns: 1.2fr 0.8fr 1fr; 
+    gap: 60px; /* Space barha di gayi hai */
+    padding: 0 5%;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* About/Brand Section */
+.footer-brand h2 {
+    color: #0044ff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.footer-desc {
+    color: #888;
+    line-height: 1.8;
+    font-size: 14px;
+    max-width: 300px; /* Text ko chota rakha taake chipka hua na lage */
+}
+
+/* Headings */
+.footer-heading {
+    font-size: 19px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 35px;
+    height: 2px;
+    background: #0044ff;
+}
+
+/* Links Section */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 14.5px;
+    display: inline-block;
+}
+
+.footer-links li a:hover {
+    color: #0044ff;
+    transform: translateX(10px); /* Smooth movement */
+}
+
+/* Contact Section (Push to extreme Right Corner) */
+.footer-contact-info {
+    justify-self: end; /* Ye line contact ko bilkul right corner mein le jayegi */
+    text-align: left;
+    min-width: 250px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    color: #fff;
+}
+
+.contact-item i {
+    color: #0044ff;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.social-box {
+    width: 42px;
+    height: 42px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s all ease;
+}
+
+.social-box:hover {
+    background: #0044ff;
+    border-color: #0044ff;
+    box-shadow: 0 8px 15px rgba(0, 68, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding: 25px 0;
+    border-top: 1px solid #111;
+    color: #555;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+    .footer-contact-info {
+        justify-self: center;
+        padding-left: 0;
+    }
+    .footer-brand, .footer-desc {
+        margin: 0 auto;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-item {
+        justify-content: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+
+////////////////////////////projects////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #111;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00f;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    background-color: #00f;
+    color: #000;
+}
+
+
+///////////////project_hero///////////////
+
+.project-hero {
+    position: relative;
+    height: 100vh;           /* Screen ki puri height use karega */
+    min-height: 850px;       /* Isay thora barhaya hai taake space nazar aaye */
+    background: #050505;
+    display: flex;
+    align-items: center;      /* Vertically exact center karne ke liye */
+    justify-content: center;   /* Horizontally exact center karne ke liye */
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* --- Navbar sa gap dene ke liye --- */
+    padding-top: 120px;       /* Heading ko navbar sa necha push karne ke liye */
+    padding-bottom: 80px;     /* Bottom sa space dene ke liye */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at center, rgba(0, 68, 255, 0.12) 0%, transparent 50%);
+    transform: translate(-50%, -50%);
+    animation: rotateGlow 12s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotateGlow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-content h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.1;
+    width: 100%;
+    text-align: center;
+
+    /* --- Heading ko necha lane ke liye --- */
+    margin-top: 50px;    /* Isay barhane se heading mazeed necha aye gi */
+    margin-bottom: 20px; /* Ye paragraph ke sath gap hai */
+}
+
+.hero-content h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;      /* Heading aur paragraph ke darmiyan gap */
+    width: 100%;
+    text-align: center;
+}
+
+.line-one {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #0044ff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 90%;               /* Screen ke edges se thora gap rahega */
+    max-width: 900px;         /* Pura container thora narrow kiya hai balance ke liye */
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;
+    margin: 0 auto;           
+    text-align: center;
+}
+
+.hero-content p {
+    color: #999;
+    font-size: 1.15rem;
+    line-height: 1.7;          /* Lines ke darmiyan behtar gap */
+    margin: 0 auto 25px;       /* Paragraph ko center mein rakhne ke liye */
+    max-width: 750px;          /* Description ki line ko control karne ke liye width kam ki hai */
+    text-align: center;
+    width: 100%;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(30px, 5vw, 60px);
+    margin-bottom: 40px;      /* Is gap ko barhane se button upar move ho jayega */
+    width: 100%;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 45px;
+    background: #0044ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    
+    /* --- Button ko dobara CENTER mein lane ke liye --- */
+    margin: 0 auto;           /* Ye sabse zaroori line hai alignment fix karne ke liye */
+    
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0, 68, 255, 0.3);
+}.stat-item {
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    display: block;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 45px;
+    background: #0044ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0, 68, 255, 0.3);
+    margin-bottom: 20px;     /* Button ko thora mazeed upar lift karne ke liye */
+}
+
+.hero-btn:hover {
+    background: #0033cc;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 68, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .project-hero {
+        height: auto;
+        padding: 120px 20px 80px; /* Mobile par bhi Navbar sa door rahega */
+    }
+    .hero-stats { 
+        gap: 25px; 
+        flex-wrap: wrap;
+    }
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content p { font-size: 1rem; }
+}
+
+///////////project.////////////////
+
+.projects-section {
+    background-color: #111;
+    padding: 80px 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #00f; 
+    text-transform: uppercase;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,255,0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 0 35px rgba(0,0,255,0.7);
+    border-color: #00f;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #00f;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project-info p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* --- Professional Footer Styling --- */
+.main-footer {
+    background: #050505; /* Deep Black */
+    color: #ffffff;
+    padding: 80px 0 30px;
+    border-top: 1px solid #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 5%;
+}
+
+.footer-box h3 {
+    color: #0044ff; /* Professional Blue */
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Heading ke niche choti line */
+.footer-box h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background: #0044ff;
+}
+
+.footer-box p {
+    color: #888;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.footer-box ul li a:hover {
+    color: #0044ff;
+    padding-left: 10px; /* Hover effect */
+}
+
+/* Contact Info Icons */
+.footer-box p i {
+    color: #0044ff;
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #111;
+    color: #555;
+    font-size: 13px;
+}
+
+/* Responsive Grid for Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-box h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+////////////////////////////////contact.php/////////////////////////
+
+
+
+
+/* --- Professional Contact Hero Section --- */
+.contact-hero-professional {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;         /* Puri screen ki height */
+    background: #050505;
+    display: flex;             /* Flexbox for centering */
+    flex-direction: column;    /* Vertical alignment */
+    justify-content: center;   /* Upar aur niche se center */
+    align-items: center;       /* Left aur right se center */
+    padding: 100px 20px;       /* Safety padding */
+    overflow: hidden;          /* Dots ko bahar jane se rokne ke liye */
+    box-sizing: border-box;
+}
+
+/* --- Dots Background (Section ke andar lock) --- */
+.dots-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;             /* Sirf isi section tak dots rahengi */
+    background-image: radial-gradient(#1a1a1a 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    opacity: 0.4;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+    pointer-events: none;      /* Clickable items ko disturb na kare */
+}
+
+.hero-content-center {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    /* Dono axes par centering lock karne ke liye */
+    justify-content: center;   
+    align-items: center;       
+    margin: 0 auto;            /* Horizontal center block */
+}
+
+.hero-title {
+    font-size: clamp(4rem, 12vw, 8rem); 
+    color: #fff;
+    font-weight: 900;
+    /* Margin reset kiya hai taake spacing alignment kharab na kare */
+    margin: 0; 
+    padding: 0;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    width: 100%;
+}
+
+/* --- Subtitle Spacing --- */
+.hero-subtitle {
+    color: #888;
+    font-size: 1.2rem;
+    max-width: 600px;
+    /* Upar se thora margin taake title se chipke nahi, baki center */
+    margin: 20px 0 0 0; 
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* --- Mouse Scroll Animation --- */
+.scroll-down-wrapper {
+    position: absolute;
+    bottom: 30px;
+}
+
+.mouse-icon {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: #0044ff;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 1.5s infinite;
+}
+
+/* --- Animations --- */
+@keyframes lightPass {
+    100% { left: 100%; }
+}
+
+@keyframes scrollWheel {
+    0% { top: 6px; opacity: 1; }
+    100% { top: 25px; opacity: 0; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* --- Contact Layout Styling --- */
+.contact-layout-pro {
+    background: #050505;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-grid {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap; /* Mobile friendly */
+}
+
+/* Info Column (Left) */
+.info-column {
+    flex: 1;
+    min-width: 320px;
+    text-align: left;
+}
+
+.section-heading {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.section-subtext {
+    color: #888;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0044ff; /* Blue Theme Icon */
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.contact-box:hover .icon-circle {
+    border-color: #0044ff;
+    box-shadow: 0 0 15px rgba(0, 68, 255, 0.2);
+}
+
+.box-content span {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.box-content p {
+    color: #888;
+    margin: 0;
+}
+
+/* Form Column (Right) */
+.form-column {
+    flex: 1;
+    min-width: 350px;
+}
+
+.glass-form {
+    background: #0d0d0d;
+    padding: 45px;
+    border-radius: 30px;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pro-input-group input, 
+.pro-input-group textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 18px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.pro-input-group input:focus, 
+.pro-input-group textarea:focus {
+    border-color: #0044ff; /* Blue focus like your first screen */
+    background: #161616;
+}
+
+.blue-submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: #0044ff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0, 68, 255, 0.3);
+}
+
+.blue-submit-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 68, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-grid { flex-direction: column; }
+    .section-heading { font-size: 2.5rem; }
+}
+
+/* --- Full Screen Map Section --- */
+.map-hero {
+    position: relative;
+    width: 100%;
+    height: 110vh;    /* Isay 100 se 110vh kar diya hai taake map thora aur neeche tak aaye */
+    overflow: hidden;
+    margin-top: 0;    /* Navbar ke sath chipka rahega */
+}
+
+.map-container-full {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.2) contrast(1.1); /* Map ke colors thore natural rakhe hain */
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: rgba(0, 68, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+    40% {transform: translateX(-50%) translateY(-10px);}
+    60% {transform: translateX(-50%) translateY(-5px);}
+}
+
+
+////////////////////contact.footer/////////////////////
+
+.main-footer {
+    background: #0d0d0d;
+    color: #ffffff;
+    padding: 80px 0 20px;
+    border-top: 1px solid #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    color: #0044ff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-desc {
+    color: #a0a0a0;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.footer-heading {
+    font-size: 19px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 35px;
+    height: 2px;
+    background: #0044ff;
+}
+
+.text-center .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.footer-links li a:hover {
+    color: #0044ff;
+    padding-left: 8px;
+}
+
+.footer-contact p {
+    color: #a0a0a0;
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contact i {
+    color: #0044ff;
+}
+
+.social-wrapper {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s ease;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    background: #0044ff;
+    border-color: #0044ff;
+    transform: translateY(-5px);
+}
+
+.fiverr-btn {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.fiverr-btn:hover {
+    background: #0044ff !important;
+    color: #ffffff !important;
+    border-color: #0044ff !important;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #1a1a1a;
+    color: #555;
+    font-size: 13px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+.footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+.social-wrapper {
+        justify-content: center;
+    }
+}
+
+
+
 
 

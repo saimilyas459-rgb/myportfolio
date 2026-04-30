@@ -6,6 +6,8 @@
     <title>Saim Ilyas Portfolio</title>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     
 </head>
 <body>
@@ -16,14 +18,17 @@
     $email = "saimilyas459@gmail.com";
 ?>
 
-<header>
-    <div class="logo"><?php echo $user_name; ?></div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Portfolio</a>
-        <a href="#contact">Contact</a>
+<header class="site-header">
+    <div class="header-logo">
+        <?php echo $user_name; ?>
+    </div>
+   <nav class="main-navbar">
+       <a href="index.php" class="nav-item ">Home</a>
+       <a href="about.php" class="nav-item">About</a>
+       <a href="projects.php" class="nav-item">Projects</a>
+       <a href="contact.php" class="nav-item">Contact</a>
     </nav>
+
 </header>
 
 <section class="hero-container" id="home">
@@ -55,23 +60,23 @@
     </div>
 </section>
 
-<div class="social-links-container">
-    <a href="https://github.com/saimilyas459-rgb" target="_blank" class="social-icon" title="GitHub">
+<div class="about-social-btns">
+    <a href="https://github.com/saimilyas459-rgb" target="_blank" class="about-btn github" title="GitHub">
         <i class="fab fa-github"></i>
         <span>GitHub</span>
     </a>
 
-    <a href="https://pro.fiverr.com/pe/8zgYNwp" target="_blank" class="social-icon" title="Fiverr">
+    <a href="https://pro.fiverr.com/pe/8zgYNwp" target="_blank" class="about-btn fiverr" title="Fiverr">
         <i class="fas fa-bolt"></i>
         <span>Fiverr</span>
     </a>
 
-    <a href="https://www.linkedin.com/in/saim-ilyas-61a914385" target="_blank" class="social-icon" title="LinkedIn">
-        <i class="fas fa-briefcase"></i>
+    <a href="https://www.linkedin.com/in/saim-ilyas-61a914385" target="_blank" class="about-btn linkedin" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
         <span>LinkedIn</span>
     </a>
 
-    <a href="https://netzingtechnologies.com/" target="_blank" class="social-icon live-site" title="Netzing Technologies">
+    <a href="https://netzingtechnologies.com/" target="_blank" class="about-btn netzing" title="Netzing Technologies">
         <i class="fas fa-external-link-alt"></i>
         <span>Netzing Tech</span>
     </a>
@@ -224,7 +229,48 @@
     </div>
 </section>
 
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3 class="footer-brand">Saim Ilyas</h3>
+            <p class="footer-desc">Software Engineer & Full Stack Developer. Specialized in building modern web solutions and creative designs.</p>
+        </div>
 
+        <div class="footer-column text-center">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="login.php">Admin Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Contact Info</h4>
+            <div class="footer-contact">
+                <p><i class="fas fa-map-marker-alt"></i> Kotli, Azad Kashmir</p>
+                <p><i class="fas fa-phone"></i> +92 343 5948454</p>
+                <p><i class="fas fa-envelope"></i> saim.ilyas.div@gmail.com</p>
+            </div>
+            <div class="social-wrapper">
+                <a href="https://github.com/saimilyas459-rgb" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/saim-ilyas-61a914385 target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://pro.fiverr.com/pe/8zgYNwp" target="_blank" class="social-icon fiverr-btn">
+                    F
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2026 Saim Ilyas | Software Engineering Technology</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 
