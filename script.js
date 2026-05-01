@@ -1,18 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Mojooda page ka naam nikalna (e.g., about.php)
-    const currentPath = window.location.pathname.split("/").pop();
-    
-    // Navbar ke saare links ko check karna
-    const navLinks = document.querySelectorAll('.nav-item');
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
 
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        
-        // Agar link ka href aur mojooda page ka naam match kar jaye
-        if (currentPath === href || (currentPath === "" && href === "index.php")) {
-            link.classList.add('active-link');
-        } else {
-            link.classList.remove('active-link');
+        if (href.startsWith('#') && href.length > 1) {
+            const targetElement = document.querySelector(href);
+            
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
@@ -35,7 +33,7 @@ box.addEventListener('mousemove', (e) => {
 
         if (distance < 80) {
             const angle = Math.atan2(dotY - mouseY, dotX - mouseX);
-            const force = (80 - distance) / 2; 
+            const force = (80 - distance) / 2; s
             const moveX = Math.cos(angle) * force;
             const moveY = Math.sin(angle) * force;
             

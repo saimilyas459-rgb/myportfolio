@@ -18,15 +18,10 @@
         <?php echo $user_name; ?>
     </div>
     <nav class="main-navbar">
-        <?php 
-        // Ye line current page ka naam nikaalti hai
-        $current_page = basename($_SERVER['PHP_SELF']); 
-        ?>
-        
-        <a href="index.php" class="nav-item <?php echo ($current_page == 'index.php') ? 'active-link' : ''; ?>">Home</a>
-        <a href="about.php" class="nav-item <?php echo ($current_page == 'about.php') ? 'active-link' : ''; ?>">About</a>
-        <a href="projects.php" class="nav-item <?php echo ($current_page == 'projects.php') ? 'active-link' : ''; ?>">Projects</a>
-        <a href="contact.php" class="nav-item <?php echo ($current_page == 'contact.php') ? 'active-link' : ''; ?>">Contact</a>
+       <a href="index.php" class="nav-item active-link">Home</a>
+       <a href="about.php" class="nav-item">About</a>
+       <a href="projects.php" class="nav-item">Projects</a>
+       <a href="contact.php" class="nav-item">Contact</a>
     </nav>
 </header>
 <section class="about-hero-custom">

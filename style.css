@@ -1979,59 +1979,7 @@ header nav a:hover {
 
 
 
-/* Purani body/html styling ko remove kar dein aur ye use karein */
-.saim-project-full-wrapper {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    /* 100vh ka matlab hai poori screen ki height */
-    min-height: 100vh; 
-    display: flex;
-    justify-content: center; /* Horizontal Center (Left-Right) */
-    align-items: center;     /* Vertical Center (Top-Bottom) */
-    background-color: #0b0b0b;
-    /* Professional Dots Background */
-    background-image: radial-gradient(#222 1px, transparent 1px);
-    background-size: 25px 25px;
-    font-family: 'Segoe UI', sans-serif;
-}
 
-.saim-project-auth-card {
-    background: #151515;
-    padding: 40px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 420px;
-    border: 1px solid #333;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
-    text-align: center;
-    position: relative; /* Stability ke liye */
-}
-
-/* Text aur input styling */
-.saim-project-header h2 { color: #fff; margin-bottom: 25px; font-size: 28px; }
-.saim-project-input-group { margin-bottom: 20px; text-align: left; }
-.saim-project-input-group label { color: #888; font-size: 13px; display: block; margin-bottom: 8px; }
-.saim-project-input-group input {
-    width: 100%;
-    padding: 12px;
-    background: #1f1f1f;
-    border: 1px solid #333;
-    border-radius: 8px;
-    color: #fff;
-    box-sizing: border-box;
-}
-
-.saim-project-btn {
-    width: 100%;
-    padding: 14px;
-    background-color: #1877f2;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-}
 
 
 
