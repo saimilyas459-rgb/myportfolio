@@ -25,15 +25,14 @@ box.addEventListener('mousemove', (e) => {
     const mouseY = e.clientY - boxRect.top;
 
     dots.forEach(dot => {
-        const dotRect = dot.getBoundingClientRect();
-        const dotX = (dotRect.left + dotRect.width / 2) - boxRect.left;
-        const dotY = (dotRect.top + dotRect.height / 2) - boxRect.top;
+        const dotX = dot.offsetLeft + (dot.offsetWidth / 2);
+        const dotY = dot.offsetTop + (dot.offsetHeight / 2);
 
         const distance = Math.sqrt(Math.pow(mouseX - dotX, 2) + Math.pow(mouseY - dotY, 2));
 
         if (distance < 80) {
             const angle = Math.atan2(dotY - mouseY, dotX - mouseX);
-            const force = (80 - distance) / 2; s
+            const force = (80 - distance) / 2; // Extra 's' hata diya
             const moveX = Math.cos(angle) * force;
             const moveY = Math.sin(angle) * force;
             
@@ -42,9 +41,18 @@ box.addEventListener('mousemove', (e) => {
             dot.style.boxShadow = '0 0 10px #0044ff';
         } else {
             dot.style.transform = 'translate(0, 0) scale(1)';
-            dot.style.background = 'rgba(255, 255, 255, 0.15)'; // Default light state
+            dot.style.background = 'rgba(255, 255, 255, 0.08)';
             dot.style.boxShadow = 'none';
         }
+    });
+});
+
+// Mouse jab box se bahar jaye toh dots wapas apni jagah aa jayein
+box.addEventListener('mouseleave', () => {
+    dots.forEach(dot => {
+        dot.style.transform = 'translate(0, 0) scale(1)';
+        dot.style.background = 'rgba(255, 255, 255, 0.08)';
+        dot.style.boxShadow = 'none';
     });
 });
 

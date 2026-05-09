@@ -41,6 +41,11 @@ header nav a:hover {
     color: #000;
 }
 
+.nav-item.active {
+    background-color: #00f !important;
+    color: #fff !important;
+}
+
 .hero-container {
     flex: 1;
     display: flex;
@@ -747,11 +752,6 @@ body {
     transition: all 0.3s ease; 
 }
 
-.repel-dot:hover { 
-    background: #0044ff !important; 
-    box-shadow: 0 0 10px #0044ff;
-    transform: scale(1.8);
-}
 
 .box-label { 
     position: absolute; 
@@ -1976,6 +1976,100 @@ header nav a:hover {
 
 .saim-project-footer { margin-top: 25px; font-size: 14px; color: #666; }
 .saim-project-footer a { color: #1877f2; text-decoration: none; }
+
+
+
+////////////////////////////////update_profile//////////////////////////
+
+
+/* Container ko screen ke bilkul beech mein lane ke liye */
+.saim-project-full-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Height adjust ki taake center mein rahe */
+    padding: 20px;
+}
+
+/* Card Design - Dark Blue/Black Theme */
+.saim-project-auth-card {
+    background: #161b22; /* GitHub jaisa dark theme */
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.saim-project-input-group {
+    margin-bottom: 15px;
+}
+
+.saim-project-input-group label {
+    display: block;
+    color: #c9d1d9;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.saim-project-input-group input, 
+.saim-project-input-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+}
+
+/* Textarea ki height set karne ke liye */
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Blue Button Jo Scheme se match kare */
+.saim-project-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #238636; /* Green/Blue mix for action button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.saim-project-btn:hover {
+    background-color: #2ea043;
+}
+
+/* Container jo content ko bilkul screen ke darmiyan rakhega */
+.saim-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Card ka style jo blue theme se match kare */
+.saim-project-auth-card {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+}
+
+/* Form ke inputs */
+.saim-project-input-group input:focus, 
+.saim-project-input-group textarea:focus {
+    outline: none;
+    border-color: #58a6ff; /* Focus hone par blue color */
+}s
 
 
 

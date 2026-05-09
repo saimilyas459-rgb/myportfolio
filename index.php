@@ -1,13 +1,17 @@
+
+
+
 <?php
-session_start();
+session_start(); // Isay active rakhein taake logout aur welcome kaam kare
+
 if(!isset($_SESSION['username'])){
     header("Location: login.php");
     exit();
 }
 ?>
 
-<!-- HTML mein kahin bhi ye link laga dein -->
-<div style="text-align: right; padding: 20px;">
+<!-- Welcome Bar -->
+<div style="text-align: right; padding: 20px; background: #0d1117;">
     <span style="color: #fff;">Welcome, <?php echo $_SESSION['username']; ?>!</span>
     <a href="logout.php" style="background: blue; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Logout</a>
 </div>
@@ -37,11 +41,16 @@ if(!isset($_SESSION['username'])){
         <?php echo $user_name; ?>
     </div>
    <nav class="main-navbar">
-       <a href="index.php" class="nav-item ">Home</a>
-       <a href="about.php" class="nav-item">About</a>
-       <a href="projects.php" class="nav-item">Projects</a>
-       <a href="contact.php" class="nav-item">Contact</a>
-    </nav>
+    <?php 
+        // Yeh line check karti hai ke abhi konsi file khuli hui hai
+        $current_page = basename($_SERVER['PHP_SELF']); 
+    ?>
+
+    <a href="index.php" class="nav-item <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">Home</a>
+    <a href="about.php" class="nav-item <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">About</a>
+    <a href="projects.php" class="nav-item <?php echo ($current_page == 'projects.php') ? 'active' : ''; ?>">Projects</a>
+    <a href="contact.php" class="nav-item <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">Contact</a>
+</nav>
 
 </header>
 

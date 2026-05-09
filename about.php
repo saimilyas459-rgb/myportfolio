@@ -17,12 +17,17 @@
     <div class="header-logo">
         <?php echo $user_name; ?>
     </div>
-    <nav class="main-navbar">
-       <a href="index.php" class="nav-item active-link">Home</a>
-       <a href="about.php" class="nav-item">About</a>
-       <a href="projects.php" class="nav-item">Projects</a>
-       <a href="contact.php" class="nav-item">Contact</a>
-    </nav>
+   <nav class="main-navbar">
+    <?php 
+        // Yeh line check karti hai ke abhi konsi file khuli hui hai
+        $current_page = basename($_SERVER['PHP_SELF']); 
+    ?>
+
+    <a href="index.php" class="nav-item <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">Home</a>
+    <a href="about.php" class="nav-item <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">About</a>
+    <a href="projects.php" class="nav-item <?php echo ($current_page == 'projects.php') ? 'active' : ''; ?>">Projects</a>
+    <a href="contact.php" class="nav-item <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">Contact</a>
+</nav>
 </header>
 <section class="about-hero-custom">
     <div class="about-hero-bg"></div> 
