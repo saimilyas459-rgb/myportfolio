@@ -9,7 +9,6 @@
     <title>About Me | <?php echo $user_name; ?></title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
 </head>
 <body>
 
@@ -19,16 +18,15 @@
     </div>
    <nav class="main-navbar">
     <?php 
-        // Yeh line check karti hai ke abhi konsi file khuli hui hai
         $current_page = basename($_SERVER['PHP_SELF']); 
     ?>
-
     <a href="index.php" class="nav-item <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">Home</a>
     <a href="about.php" class="nav-item <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">About</a>
     <a href="projects.php" class="nav-item <?php echo ($current_page == 'projects.php') ? 'active' : ''; ?>">Projects</a>
     <a href="contact.php" class="nav-item <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">Contact</a>
 </nav>
 </header>
+
 <section class="about-hero-custom">
     <div class="about-hero-bg"></div> 
     <div class="about-hero-content">
@@ -67,6 +65,34 @@
     </div>
 </section>
 
+<section class="container" style="padding: 0 20px 40px 20px;">
+    <div class="projects-container">
+        <?php
+        $conn = new mysqli("localhost", "root", "", "mywebsite");
+        if (!$conn->connect_error) {
+            $about_query = "SELECT * FROM portfolio_items WHERE page_name='About' AND is_deleted=0 ORDER BY id DESC";
+            $about_data = $conn->query($about_query);
+            if ($about_data && $about_data->num_rows > 0) {
+                while($item = $about_data->fetch_assoc()) {
+                    $img_src = !empty($item['image_path']) ? $item['image_path'] : 'graphic.png';
+                    ?>
+                    <div class="project-card">
+                        <img src="<?= $img_src; ?>" alt="<?= $item['title']; ?>">
+                        <div class="project-info">
+                            <h3><?= $item['title']; ?></h3>
+                            <p><?= $item['description']; ?></p>
+                            <small style="color: #00d2ff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;"><?= $item['category']; ?></small>
+                        </div>
+                    </div>
+                    <?php
+                }
+            }
+            $conn->close();
+        }
+        ?>
+    </div>
+</section>
+
 <div class="about-social-btns">
     <a href="https://github.com/saimilyas459-rgb" target="_blank" class="about-btn github" title="GitHub">
         <i class="fab fa-github"></i>
@@ -89,7 +115,6 @@
     </a>
 </div>
 
-
 <footer class="main-footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -100,9 +125,9 @@
         <div class="footer-column text-center">
             <h4 class="footer-heading">Quick Links</h4>
             <ul class="footer-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#project">Projects</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About Me</a></li>
+                <li><a href="projects.php">Projects</a></li>
                 <li><a href="login.php">Admin Login</a></li>
             </ul>
         </div>
@@ -118,18 +143,15 @@
                 <a href="https://github.com/saimilyas459-rgb" target="_blank" class="social-icon">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/saim-ilyas-61a914385 target="_blank" class="social-icon">
+                <a href="https://www.linkedin.com/in/saim-ilyas-61a914385" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://pro.fiverr.com/pe/8zgYNwp" target="_blank" class="social-icon fiverr-btn">
-                    F
-                </a>
+                <a href="https://pro.fiverr.com/pe/8zgYNwp" target="_blank" class="social-icon fiverr-btn">F</a>
             </div>
         </div>
     </div>
-
     <div class="footer-copyright">
-        <p>&copy; 2026 Saim Ilyas | Software Engineering Technology</p>
+        <p>© 2026 Saim Ilyas | Software Engineering Technology</p>
     </div>
 </footer>
 

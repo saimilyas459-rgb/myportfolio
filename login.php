@@ -15,7 +15,7 @@ if(isset($_POST['login'])){
         header("Location: index.php");
         exit();
     } else {
-        $error = "Ghalat Email ya Password!";
+        $error = "Incorrect Email or Password!";
     }
 }
 ?>

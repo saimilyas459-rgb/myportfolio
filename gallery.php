@@ -21,6 +21,7 @@ if(isset($_POST['upload_image'])){
             $query = "INSERT INTO gallery (username, image_path, caption) VALUES ('$user', '$img_name', '$caption')";
             mysqli_query($conn, $query);
             $msg = "Image uploaded successfully!";
+header('Location:gallery.php');
         }
     }
 }

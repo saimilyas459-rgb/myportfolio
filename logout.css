@@ -1,0 +1,96 @@
+/* ==========================================================================
+   UPDATED CLEAN HEADER STRUCTURE (No Overlaps)
+   ========================================================================== */
+
+/* Main Global Header Wrapper */
+.site-header {
+    display: flex !important;
+    flex-direction: column !important; /* Items ko vertically line up karega */
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #0a0a0a !important; /* Symmetrical Dark Tone */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    position: relative !important;
+    z-index: 9999 !important; /* Taake hero section ke upar na aaye */
+}
+
+/* 1. Admin Bar Layer (Top Row) */
+.admin-top-ribbon {
+    background: #161b22 !important;
+    border-bottom: 1px solid #30363d !important;
+    padding: 10px 40px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.admin-status-text {
+    color: #58a6ff !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    letter-spacing: 0.5px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.logout-btn-premium {
+    background: #21262d !important;
+    color: #f0f6fc !important;
+    border: 1px solid #30363d !important;
+    padding: 5px 12px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.logout-btn-premium:hover {
+    background: #ff4b4b !important;
+    color: #ffffff !important;
+    border-color: #ff4b4b !important;
+    box-shadow: 0 0 10px rgba(255, 75, 75, 0.3) !important;
+}
+
+/* 2. Main Navigation Bar Row (Bottom Row) */
+.header-main-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 20px 40px !important; /* Clear inner breathing spaces */
+    box-sizing: border-box !important;
+    background: transparent !important;
+}
+
+/* Logo Setup inside Row */
+.header-logo {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+}
+
+/* Navbar Alignment */
+.main-navbar {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+/* Responsive Structural Breakpoints */
+@media (max-width: 768px) {
+    .admin-top-ribbon {
+        padding: 10px 20px !important;
+        justify-content: center !important;
+    }
+    
+    .header-main-row {
+        padding: 15px 20px !important;
+        flex-direction: column !important; /* Mobile par logo upar aur menu niche layer hoga */
+        gap: 15px !important;
+    }
+}
